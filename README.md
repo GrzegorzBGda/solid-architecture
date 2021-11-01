@@ -1,1 +1,1 @@
-# solid-engineering
+# Solid Engineering
