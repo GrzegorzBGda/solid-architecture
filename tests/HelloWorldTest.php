@@ -2,14 +2,11 @@
 
 declare(strict_types=1);
 
-use Example\Classes\HelloWorld;
+use SolidEngineering\Examples\HelloWorld;
 use PHPUnit\Framework\TestCase;
 
 class HelloWorldTest extends TestCase
 {
-    /**
-     * @covers \Example\Classes\HelloWorld::getHelloWorld()
-     */
     public function testShouldCheckIfBasketContainsAllNecessaryFields(): void
     {
         $example = new HelloWorld();
