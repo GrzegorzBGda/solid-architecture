@@ -1,0 +1,4 @@
+172.21.0.1 - - [14/Nov/2022:10:08:15 +0000] "GET / HTTP/1.1" 200 22 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+172.21.0.1 - - [14/Nov/2022:10:08:15 +0000] "GET /favicon.ico HTTP/1.1" 200 22 "http://localhost:8080/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+172.21.0.1 - - [14/Nov/2022:10:08:17 +0000] "GET /xdebug_info.php HTTP/1.1" 200 16714 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+172.21.0.1 - - [14/Nov/2022:10:08:18 +0000] "GET /favicon.ico HTTP/1.1" 200 22 "http://localhost:8080/xdebug_info.php" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
