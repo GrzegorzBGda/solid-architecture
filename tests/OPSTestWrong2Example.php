@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong\OPS;
-use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong\User1;
-use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong\User2;
-use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong\User3;
+use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong2\OPS;
+use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong2\User1;
+use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong2\User2;
+use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong2\User3;
 
-class OPSTest extends TestCase
+class OPSTestWrong2Example extends TestCase
 {
     public function testShouldCheckThatOPSMethodsReturnCorrectStrings(): void
     {
