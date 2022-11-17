@@ -1,5 +1,8 @@
-# Clean Docker with PHP
-Docker with PHP 8.0.5 fpm alpine, Nginx, Composer, PhpUnit and MariaDB
+## SOLID ENGINEERING - EXAMPLES FOR SOLID
+ Docker with PHP 8.0.5 fpm alpine, Nginx, Composer, PhpUnit and MariaDB
+
+## GOOGLE SLIDES PRESENTATION
+https://docs.google.com/presentation/d/1VYBi4i42no_HBMKWgzPndhjGG3rn-PbarSSXNAmKCWY
 
 ## Starting app
 docker-compose up -d
@@ -15,15 +18,6 @@ http://localhost:8080/xdebug_info.php
 
 ## Running tests
 docker-compose run php vendor/bin/phpunit
-
-## Namespaces
-change namespace "Example" in composer.json line 7 for your project name
-
-## Connecting to MySql
-1. User: user
-2. Passwd: test-pass
-3. Port 3307
-4. DB: test-db
 
 ## Using PhpUnit in PhpStorm
 1. PhpUnit By Remote Interpreter

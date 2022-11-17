@@ -2,13 +2,16 @@
 
 declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase;
-use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong\OPS;
-use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong\User1;
-use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong\User2;
-use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong\User3;
+namespace InterfaceSegregationPrinciple;
 
-class WrongExample extends TestCase
+use PHPUnit\Framework\TestCase;
+use SolidEngineering\Examples\InterfaceSegregationPrinciple\Right\OPS;
+use SolidEngineering\Examples\InterfaceSegregationPrinciple\Right\User1;
+use SolidEngineering\Examples\InterfaceSegregationPrinciple\Right\User2;
+use SolidEngineering\Examples\InterfaceSegregationPrinciple\Right\User3;
+
+
+class RightExample extends TestCase
 {
     public function testShouldCheckThatOPSMethodsReturnCorrectStrings(): void
     {
