@@ -20,7 +20,9 @@ http://localhost:8080/xdebug_info.php
 docker-compose run php vendor/bin/phpunit
 
 ## Using PhpUnit in PhpStorm
-1. PhpUnit By Remote Interpreter
-2. Provide full docker path to autoloader.php /opt/project/vendor/autoload.php
+1. Add Php Interpreter from Docker 
+2. Add Test Framework:
+   1. Add PhpUnit by Remote Interpreter
+   2. Provide full docker path to autoloader.php: setting/opt/project/vendor/autoload.php
 
 ### Pro publico bono by Grzegorz Bielski
