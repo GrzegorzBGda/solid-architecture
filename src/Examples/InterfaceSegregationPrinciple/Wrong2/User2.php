@@ -2,7 +2,7 @@
 
 namespace SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong2;
 
-class User2 implements iOPS
+class User2 implements OPSInterface
 {
 
     public function op1(): string

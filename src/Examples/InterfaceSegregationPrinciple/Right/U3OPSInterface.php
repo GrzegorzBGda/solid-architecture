@@ -2,7 +2,7 @@
 
 namespace SolidEngineering\Examples\InterfaceSegregationPrinciple\Right;
 
-interface U1OPS
+interface U3OPSInterface
 {
-    public function op1(): string;
+    public function op3(): string;
 }

@@ -2,7 +2,7 @@
 
 namespace SolidEngineering\Examples\InterfaceSegregationPrinciple\Right;
 
-class OPS implements U1OPS, U2OPS, U3OPS
+class OPS implements U1OPSInterface, U2OPSInterface, U3OPSInterface
 {
     public function op1(): string
     {
