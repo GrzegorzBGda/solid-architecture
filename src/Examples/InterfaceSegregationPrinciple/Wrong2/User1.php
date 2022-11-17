@@ -2,10 +2,21 @@
 
 namespace SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong2;
 
-class User1 extends OPS
+class User1 implements iOPS
 {
-    public function businessLogicForUser1(): string
+
+    public function op1(): string
     {
-        return $this->op1();
+        return "op1 executed";
+    }
+
+    public function op2(): string
+    {
+        // TODO: Implement op2() method.
+    }
+
+    public function op3(): string
+    {
+        // TODO: Implement op3() method.
     }
 }

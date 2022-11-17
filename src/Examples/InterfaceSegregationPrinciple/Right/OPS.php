@@ -1,8 +1,8 @@
 <?php
 
-namespace SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong2;
+namespace SolidEngineering\Examples\InterfaceSegregationPrinciple\Right;
 
-class OPS implements iOPS
+class OPS implements U1OPS, U2OPS, U3OPS
 {
     public function op1(): string
     {
