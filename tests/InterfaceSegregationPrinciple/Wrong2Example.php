@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace InterfaceSegregationPrinciple;
+
 use PHPUnit\Framework\TestCase;
 use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong2\User1;
 use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong2\User2;
