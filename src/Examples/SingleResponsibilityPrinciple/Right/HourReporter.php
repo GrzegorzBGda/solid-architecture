@@ -4,7 +4,6 @@ namespace SolidEngineering\Examples\SingleResponsibilityPrinciple\Right;
 
 class HourReporter
 {
-
     public function __construct(private EmployeeData $employeeData)
     {
     }
