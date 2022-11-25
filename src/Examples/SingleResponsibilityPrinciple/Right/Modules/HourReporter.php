@@ -1,6 +1,8 @@
 <?php
 
-namespace SolidEngineering\Examples\SingleResponsibilityPrinciple\Right;
+namespace SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\Modules;
+
+use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\EmployeeData;
 
 class HourReporter
 {

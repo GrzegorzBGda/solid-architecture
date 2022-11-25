@@ -5,14 +5,15 @@ declare(strict_types=1);
 namespace SingleResponsibilityPrinciple;
 
 use PHPUnit\Framework\TestCase;
+use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\Employee;
 use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\EmployeeData;
 use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\EmployeeFacade;
-use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\EmployeeSaver;
-use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\HourReporter;
-use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\PayCalculator;
+use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\Modules\EmployeeSaver;
+use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\Modules\HourReporter;
+use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\Modules\PayCalculator;
 
 
-class RightExample extends TestCase
+class RightExamples extends TestCase
 {
     public function testShouldCheckThatSolutionIsWorkingCorrectly(): void
     {
@@ -33,5 +34,13 @@ class RightExample extends TestCase
         self::assertEquals("calculatePay() executed", $employeeFacade->calculatePay());
         self::assertEquals("reportHours() executed", $employeeFacade->reportHours());
         self::assertEquals("save() executed", $employeeFacade->save());
+    }
+
+    public function testShouldCheckThatSolutionUsingClassIsWorkingCorrectly(): void
+    {
+        $employee = new Employee(new EmployeeData());
+        self::assertEquals("calculatePay() executed", $employee->calculatePay());
+        self::assertEquals("reportHours() executed", $employee->reportHours());
+        self::assertEquals("save() executed", $employee->save());
     }
 }

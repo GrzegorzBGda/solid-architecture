@@ -6,19 +6,17 @@ use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\Modules\Employ
 use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\Modules\HourReporter;
 use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\Modules\PayCalculator;
 
-class EmployeeFacade
+class Employee
 {
     private PayCalculator $payCalculator;
     private HourReporter $hourReporter;
     private EmployeeSaver $employeeSaver;
 
-    public function __construct()
+    public function __construct(private EmployeeData $employeeData)
     {
-        $employeeData = new EmployeeData();
-
-        $this->payCalculator = new PayCalculator($employeeData);
-        $this->hourReporter = new HourReporter($employeeData);
-        $this->employeeSaver = new EmployeeSaver($employeeData);
+        $this->payCalculator = new PayCalculator($this->employeeData);
+        $this->hourReporter = new HourReporter($this->employeeData);
+        $this->employeeSaver = new EmployeeSaver($this->employeeData);
     }
 
     public function reportHours(): string
