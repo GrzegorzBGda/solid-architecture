@@ -18,7 +18,6 @@ class FinancialReportExample extends TestCase
     public function testShouldCheckWebReportType(): void
     {
         $webPresenter = new ScreenPresenter(new WebView());
-
         $generator = new FinancialReportGenerator(new FinancialDataMapper());
 
         $controller = new FinancialReportController($generator, $webPresenter);
@@ -30,12 +29,11 @@ class FinancialReportExample extends TestCase
     public function testShouldCheckPDFReportType(): void
     {
         $webPresenter = new PrintPresenter(new PDFView());
-
         $generator = new FinancialReportGenerator(new FinancialDataMapper());
 
         $controller = new FinancialReportController($generator, $webPresenter);
         self::assertEquals(
-            "PDF report created for year 2022 in A4 format", $controller->getReport(2022)
+            "PDF report created for year 2021 in A4 format", $controller->getReport(2021)
         );
     }
 }
