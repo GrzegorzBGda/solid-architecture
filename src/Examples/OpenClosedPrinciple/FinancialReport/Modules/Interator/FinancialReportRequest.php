@@ -2,8 +2,6 @@
 
 namespace SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Interator;
 
-use InvalidArgumentException;
-
 class FinancialReportRequest
 {
     private int $year;
