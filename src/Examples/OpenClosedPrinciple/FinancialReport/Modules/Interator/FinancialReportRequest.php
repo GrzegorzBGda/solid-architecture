@@ -6,23 +6,30 @@ use InvalidArgumentException;
 
 class FinancialReportRequest
 {
+    private int $year;
     private string $type;
 
-    public function __construct(string $request)
+    public function __construct()
     {
-        $this->setType($request);
+    }
+
+    public function setYear(int $year): void
+    {
+        $this->year = $year;
+    }
+
+    public function getYear(): int
+    {
+        return $this->year;
+    }
+
+    public function setType(string $type): void
+    {
+        $this->type = $type;
     }
 
     public function getType(): string
     {
         return $this->type;
-    }
-
-    private function setType(string $request): void
-    {
-        $this->type = match($request) {
-            'for_web' => 'web',
-            default => throw new InvalidArgumentException('Unknown type ' . $request)
-        };
     }
 }

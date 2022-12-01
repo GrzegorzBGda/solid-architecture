@@ -3,23 +3,24 @@
 namespace SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Controller;
 
 use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Interator\FinancialReportGenerator;
-use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Interator\FinancialReportRequest;
 
 class FinancialReportController
 {
 
-    public function __construct(
-        private string                   $request,
-        private FinancialReportPresenter $presenter
-    )
+    public function __construct(private FinancialReportGenerator $generator, private FinancialReportPresenter $presenter)
     {
     }
 
-    public function getReport(): string
+    public function getWebReport(int $year): string
     {
-        $generator = new FinancialReportGenerator(new FinancialReportRequest($this->request));
+        $request = $this->generator->getRequest();
+        $request->setYear($year);
+        $request->setType(FinancialReportGenerator::WEB_TYPE);
 
-        $this->presenter->setResponse($generator->requestReportData());
+        $response = $this->generator->requestReportData($request);
+
+        $this->presenter->setResponse($response);
         return $this->presenter->createReport();
     }
+
 }

@@ -11,7 +11,16 @@ class WebView implements ScreenView
 
     public function createReportForWeb(): string
     {
-        return $this->model->getReportData() . " crated in WebView";
+        $reportData = $this->model->getReportData();
+
+        return
+            ucfirst($reportData['type'])
+            . ' ' . $reportData['report']
+            . ' for year'
+            . ' ' . $reportData['year']
+            . ' in'
+            . ' ' . $this->model->getMeta()['mode']
+            . ' mode';
     }
 
     public function setModel(ScreenViewModel $model): void
