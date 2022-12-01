@@ -5,17 +5,17 @@ namespace SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\
 class FinancialReportResponse
 {
 
-    public function __construct(private array $reportData)
-    {
-    }
+    private array $data;
 
-    public function setData(array $reportData): void
+    public function __construct(array $reportData)
     {
-        $this->reportData = $reportData;
+        $this->data['report'] = $reportData['report'];
+        $this->data['year'] = $reportData['year'];
+        $this->data['type'] = $reportData['type'];
     }
 
     public function getData(): array
     {
-        return $this->reportData;
+        return $this->data;
     }
 }

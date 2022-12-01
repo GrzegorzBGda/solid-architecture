@@ -4,5 +4,7 @@ namespace SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\
 
 interface FinancialReportRequester
 {
+    public function createRequest(): FinancialReportRequest;
+
     public function requestReportData(FinancialReportRequest $request): FinancialReportResponse;
 }

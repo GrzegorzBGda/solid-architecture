@@ -11,13 +11,13 @@ class FinancialReportController
     {
     }
 
-    public function getWebReport(int $year): string
+    public function getReport(int $year): string
     {
-        $request = $this->generator->getRequest();
-        $request->setYear($year);
-        $request->setType(FinancialReportGenerator::WEB_TYPE);
+        $reportRequest = $this->generator->createRequest();
+        $reportRequest->setYear($year);
+        $reportRequest->setType($this->presenter->getType());
 
-        $response = $this->generator->requestReportData($request);
+        $response = $this->generator->requestReportData($reportRequest);
 
         $this->presenter->setResponse($response);
         return $this->presenter->createReport();

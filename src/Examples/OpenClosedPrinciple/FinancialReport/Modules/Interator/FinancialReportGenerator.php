@@ -4,24 +4,17 @@ namespace SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\
 
 class FinancialReportGenerator implements FinancialReportRequester
 {
-    const WEB_TYPE = 'web';
-
-    public function __construct()
+    public function __construct(private FinancialDataGateway $financialDataMapper)
     {
     }
 
     public function requestReportData(FinancialReportRequest $request): FinancialReportResponse
     {
-        return new FinancialReportResponse(
-            ['report_data' => [
-                'report' => 'report created',
-                'year' => $request->getYear(),
-                'type' => $request->getType()
-            ]]
-        );
+        $financialData = $this->financialDataMapper->getFinancialEntities($request);
+        return new FinancialReportResponse($financialData->getData());
     }
 
-    public function getRequest(): FinancialReportRequest
+    public function createRequest(): FinancialReportRequest
     {
         return new FinancialReportRequest();
     }

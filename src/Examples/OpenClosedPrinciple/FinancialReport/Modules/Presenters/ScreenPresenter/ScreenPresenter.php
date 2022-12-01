@@ -8,6 +8,7 @@ use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Intera
 class ScreenPresenter implements FinancialReportPresenter
 {
     private ScreenViewModel $model;
+    private string $type = 'web';
 
     public function __construct(private ScreenView $view)
     {
@@ -22,5 +23,10 @@ class ScreenPresenter implements FinancialReportPresenter
     {
         $this->view->setModel($this->model);
         return $this->view->createReportForWeb();
+    }
+
+    public function getType(): string
+    {
+        return $this->type;
     }
 }

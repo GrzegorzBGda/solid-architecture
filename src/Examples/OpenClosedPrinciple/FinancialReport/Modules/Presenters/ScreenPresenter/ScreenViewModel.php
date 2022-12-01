@@ -15,9 +15,9 @@ class ScreenViewModel
         $this->data = $response->getData();
     }
 
-    public function getReportData()
+    public function getReportData(): array
     {
-        return $this->data['report_data'];
+        return $this->data;
     }
 
     public function getData(): array
