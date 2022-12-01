@@ -2,12 +2,12 @@
 
 namespace SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Controller;
 
-use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Interator\FinancialReportGenerator;
+use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Interator\FinancialReportRequester;
 
 class FinancialReportController
 {
 
-    public function __construct(private FinancialReportGenerator $generator, private FinancialReportPresenter $presenter)
+    public function __construct(private FinancialReportRequester $generator, private FinancialReportPresenter $presenter)
     {
     }
 
