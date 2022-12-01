@@ -4,8 +4,6 @@ namespace SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\
 
 use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Controller\FinancialReportPresenter;
 use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Interator\FinancialReportResponse;
-use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Presenters\ScreenPresenter\ScreenView;
-use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Presenters\ScreenPresenter\ScreenViewModel;
 
 class PrintPresenter implements FinancialReportPresenter
 {

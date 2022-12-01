@@ -3,7 +3,6 @@
 namespace SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Controller;
 
 use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Interator\FinancialReportResponse;
-use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Presenters\ScreenPresenter\ScreenView;
 
 interface FinancialReportPresenter
 {
