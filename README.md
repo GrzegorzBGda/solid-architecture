@@ -1,5 +1,5 @@
 ## SOLID ARCHITECTURE - EXAMPLES FOR SOLID
- Docker with PHP 8.0.5 fpm alpine, Nginx, Composer, PhpUnit and MariaDB
+ Docker with PHP 8.2 fpm alpine, Nginx, Composer, PhpUnit and MariaDB
 
 ## GOOGLE SLIDES PRESENTATION
 https://docs.google.com/presentation/d/1VYBi4i42no_HBMKWgzPndhjGG3rn-PbarSSXNAmKCWY
