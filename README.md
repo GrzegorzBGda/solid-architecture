@@ -4,6 +4,9 @@
 ## GOOGLE SLIDES PRESENTATION
 https://docs.google.com/presentation/d/1VYBi4i42no_HBMKWgzPndhjGG3rn-PbarSSXNAmKCWY
 
+## First use
+docker-compose up -d --build
+
 ## Starting app
 docker-compose up -d
 
@@ -23,6 +26,8 @@ docker-compose run php vendor/bin/phpunit
 1. Add Php Interpreter from Docker 
 2. Add Test Framework:
    1. Add PhpUnit by Remote Interpreter
-   2. Provide full docker path to autoloader.php: setting/opt/project/vendor/autoload.php
+   2. Provide full docker path to autoloader.php in settings: 
+   /opt/project/vendor/autoload.php
+   
 
 ### Pro publico bono by Grzegorz Bielski
