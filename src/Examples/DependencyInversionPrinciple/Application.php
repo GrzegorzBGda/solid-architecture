@@ -3,7 +3,6 @@
 namespace SolidEngineering\Examples\DependencyInversionPrinciple;
 class Application
 {
-
     private ?Service $service = null;
 
     public function __construct(private readonly ServiceFactory $factory)
