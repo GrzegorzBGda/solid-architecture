@@ -4,9 +4,8 @@ namespace SolidEngineering\Examples\Other\LinkFinder\Controller;
 
 use SolidEngineering\Examples\Other\LinkFinder\ExampleHttpRequest;
 use SolidEngineering\Examples\Other\LinkFinder\LinkFinder\LinkFinderApi;
-use SolidEngineering\Examples\Other\LinkFinder\LinkFinder\LinksLocations;
 
-class LinkFinderController
+readonly class LinkFinderController
 {
 
     public function __construct(private ExampleHttpRequest $request, private LinkFinderApi $linkFinder)
@@ -15,9 +14,9 @@ class LinkFinderController
 
     public function getLinksLocations(): array
     {
-        $linkToFind = $this->linkFinder->createLinksToFind();
-        $linkToFind->setUrl($this->request->getUrl());
-        $linksLocation = $this->linkFinder->getLinks($linkToFind);
+        $linksToFind = $this->linkFinder->createLinksToFind();
+        $linksToFind->setUrl($this->request->getUrl());
+        $linksLocation = $this->linkFinder->getLinksLocations($linksToFind);
 
         return $linksLocation->getLinksLocations();
     }

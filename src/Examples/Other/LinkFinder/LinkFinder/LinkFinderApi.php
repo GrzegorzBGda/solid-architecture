@@ -4,7 +4,7 @@ namespace SolidEngineering\Examples\Other\LinkFinder\LinkFinder;
 
 interface LinkFinderApi
 {
-    public function createLinksToFind(): LinkToFind;
+    public function createLinksToFind(): LinksToFind;
 
-    public function getLinks(LinkToFind $linkToFind): LinksLocations;
+    public function getLinksLocations(LinksToFind $linksToFind): LinksLocations;
 }

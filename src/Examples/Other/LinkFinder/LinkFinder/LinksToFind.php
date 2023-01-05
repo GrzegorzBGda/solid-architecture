@@ -2,7 +2,7 @@
 
 namespace SolidEngineering\Examples\Other\LinkFinder\LinkFinder;
 
-class LinkToFind
+class LinksToFind
 {
     private string $url;
 

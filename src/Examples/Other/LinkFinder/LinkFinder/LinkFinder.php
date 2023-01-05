@@ -6,17 +6,19 @@ use SolidEngineering\Examples\Other\LinkFinder\Wordpress\WordpressApi;
 
 class LinkFinder implements LinkFinderApi
 {
-    public function __construct(WordpressApi $linkFinderRepository)
+    public function __construct(private LinkFinderRepository $linkFinderRepository)
     {
     }
 
-    public function createLinksToFind(): LinkToFind
+    public function createLinksToFind(): LinksToFind
     {
-        return new LinkToFind();
+        return new LinksToFind();
     }
 
-    public function getLinks(LinkToFind $linkToFind): LinksLocations
+    public function getLinksLocations(LinksToFind $linksToFind): LinksLocations
     {
-        return new LinksLocations();
+        $linksLocations = new LinksLocations();
+        $linksLocations->setLinksLocations($this->linkFinderRepository->getData($linksToFind));
+        return $linksLocations;
     }
 }
