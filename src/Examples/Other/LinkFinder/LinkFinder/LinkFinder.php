@@ -2,7 +2,7 @@
 
 namespace SolidEngineering\Examples\Other\LinkFinder\LinkFinder;
 
-use SolidEngineering\Examples\Other\LinkFinder\Wordpress\WordpressApi;
+use SolidEngineering\Examples\Other\LinkFinder\Wordpress\WordpressClientApi;
 
 class LinkFinder implements LinkFinderApi
 {

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Examples\LinkFinder;
 
 use PHPUnit\Framework\TestCase;
+use SolidEngineering\Examples\Other\LinkFinder\BlogClientApi;
 use SolidEngineering\Examples\Other\LinkFinder\Controller\LinkFinderController;
 use SolidEngineering\Examples\Other\LinkFinder\ExampleHttpRequest;
 use SolidEngineering\Examples\Other\LinkFinder\LinkFinder\LinkFinder;
@@ -17,7 +18,7 @@ class LinkFinderExample extends TestCase
         $request = new ExampleHttpRequest();
         $request->setUrl('https://research.com/getLinks/blog');
 
-        $linkFinderRepository = new WordpressBlogMapper();
+        $linkFinderRepository = new WordpressBlogMapper(new BlogClientApi());
         $linkFinder = new LinkFinder($linkFinderRepository);
 
         $controller = new LinkFinderController($request, $linkFinder);
