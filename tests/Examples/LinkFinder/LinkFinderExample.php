@@ -7,6 +7,8 @@ namespace Examples\LinkFinder;
 use PHPUnit\Framework\TestCase;
 use SolidEngineering\Examples\Other\LinkFinder\BlogClientApi;
 use SolidEngineering\Examples\Other\LinkFinder\Controller\LinkFinderController;
+use SolidEngineering\Examples\Other\LinkFinder\CSV\CSVPresenter;
+use SolidEngineering\Examples\Other\LinkFinder\CSVFrontView;
 use SolidEngineering\Examples\Other\LinkFinder\ExampleHttpRequest;
 use SolidEngineering\Examples\Other\LinkFinder\LinkFinder\LinkFinder;
 use SolidEngineering\Examples\Other\LinkFinder\Wordpress\WordpressBlogMapper;
@@ -21,9 +23,11 @@ class LinkFinderExample extends TestCase
         $linkFinderRepository = new WordpressBlogMapper(new BlogClientApi());
         $linkFinder = new LinkFinder($linkFinderRepository);
 
-        $controller = new LinkFinderController($request, $linkFinder);
+        $linkResponsePresenter = new CSVPresenter(new CSVFrontView());
+
+        $controller = new LinkFinderController($request, $linkFinder, $linkResponsePresenter);
         self::assertEquals(
-            ['link1' => 'location1', 'link2' => 'location2', 'link3' => 'location3'],
+            'location1,location2,location3',
             $controller->getLinksLocations()
         );
     }
