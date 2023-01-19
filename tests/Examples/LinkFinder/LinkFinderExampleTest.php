@@ -13,7 +13,7 @@ use SolidEngineering\Examples\Other\LinkFinder\ExampleHttpRequest;
 use SolidEngineering\Examples\Other\LinkFinder\LinkFinder\LinkFinder;
 use SolidEngineering\Examples\Other\LinkFinder\Wordpress\WordpressBlogMapper;
 
-class LinkFinderExample extends TestCase
+class LinkFinderExampleTest extends TestCase
 {
     public function testShouldCheckUsingServiceViaHttpRequest(): void
     {

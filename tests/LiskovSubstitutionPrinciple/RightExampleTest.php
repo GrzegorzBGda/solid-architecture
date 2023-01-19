@@ -9,7 +9,7 @@ use SolidEngineering\Examples\LiskovSubstitutionPrinciple\Right\Billing;
 use SolidEngineering\Examples\LiskovSubstitutionPrinciple\Right\PersonalLicense;
 use SolidEngineering\Examples\LiskovSubstitutionPrinciple\Right\BusinessLicense;
 
-class RightExample extends TestCase
+class RightExampleTest extends TestCase
 {
     public function testShouldCheckThatBillingCanUsePersonalLicense(): void
     {

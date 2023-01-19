@@ -13,7 +13,7 @@ use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Presen
 use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Views\PDFView\PDFView;
 use SolidEngineering\Examples\OpenClosedPrinciple\FinancialReport\Modules\Views\WebView\WebView;
 
-class FinancialReportExample extends TestCase
+class FinancialReportExampleTest extends TestCase
 {
     public function testShouldCheckWebReportType(): void
     {

@@ -9,7 +9,7 @@ use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong2\User1;
 use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong2\User2;
 use SolidEngineering\Examples\InterfaceSegregationPrinciple\Wrong2\User3;
 
-class Wrong2Example extends TestCase
+class Wrong2ExampleTest extends TestCase
 {
     public function testShouldCheckIfUserMethodsReturnCorrectStrings(): void
     {

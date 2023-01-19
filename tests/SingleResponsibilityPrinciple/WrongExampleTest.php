@@ -9,7 +9,7 @@ use SolidEngineering\Examples\SingleResponsibilityPrinciple\Wrong\Employee;
 use SolidEngineering\Examples\SingleResponsibilityPrinciple\Wrong\RegularHours;
 use SolidEngineering\Examples\SingleResponsibilityPrinciple\Wrong\RegularHoursChangedForCOO;
 
-class WrongExample extends TestCase
+class WrongExampleTest extends TestCase
 {
     public function testShouldCheckThatEmployeeMethodsReturnCorrectStrings(): void
     {

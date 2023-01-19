@@ -9,7 +9,7 @@ use SolidEngineering\Examples\LiskovSubstitutionPrinciple\Wrong\User;
 use SolidEngineering\Examples\LiskovSubstitutionPrinciple\Wrong\Rectangle;
 use SolidEngineering\Examples\LiskovSubstitutionPrinciple\Wrong\Square;
 
-class WrongExample extends TestCase
+class WrongExampleTest extends TestCase
 {
     public function testShouldCheckThatAreaIsCalculatedCorrectlyForRectangle(): void
     {

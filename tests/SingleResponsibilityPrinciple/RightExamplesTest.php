@@ -13,7 +13,7 @@ use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\Modules\HourRe
 use SolidEngineering\Examples\SingleResponsibilityPrinciple\Right\Modules\PayCalculator;
 
 
-class RightExamples extends TestCase
+class RightExamplesTest extends TestCase
 {
     public function testShouldCheckThatSolutionIsWorkingCorrectly(): void
     {
